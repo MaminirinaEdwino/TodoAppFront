@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1{
+  @apply font-semibold text-center text-3xl p-5
+}
+h2{
+  @apply font-semibold text-center mb-3
+}
+#NewTask{
+  @apply m-auto flex flex-col w-9/12 p-3 shadow-lg rounded-lg drop-shadow-md bg-blue-100 bg-opacity-50 
+}
+#taskName{
+  @apply shadow-lg h-10 rounded-lg p-2 drop-shadow-md mb-3
+}
+textarea{
+  @apply drop-shadow-md rounded-md p-2 h-28 resize-none mb-3
+}
+label{
+  @apply text-blue-500
+}
+.addbtn{
+  @apply bg-blue-500 w-fit p-3 rounded-full text-white 
+}
+
+.taskList{
+  @apply w-9/12 m-auto mt-6 p-3 bg-blue-100 bg-opacity-100 rounded-lg drop-shadow-md mb-5 shadow-lg transition-all duration-300
+}
+.taskList div {
+  @apply h-fit
+}
+.divButton{
+  @apply flex w-full justify-around
+}
+article{
+  @apply bg-white rounded-lg p-2 
+  shadow-lg drop-shadow-md mt-3
+}
+article .name{
+  @apply text-blue-500 flex items-center gap-2 justify-between
+}
+
+article button{
+  @apply text-lg
+}
+.btn{
+  @apply w-fit flex gap-3 
+}
