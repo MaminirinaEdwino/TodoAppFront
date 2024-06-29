@@ -9,16 +9,37 @@ h2{
   @apply font-semibold text-center mb-3
 }
 #NewTask{
-  @apply m-auto flex flex-col w-9/12 p-3 shadow-lg rounded-lg drop-shadow-md bg-blue-100 bg-opacity-50 
+  @apply m-auto flex flex-col w-9/12 p-3 shadow-lg rounded-lg drop-shadow-md bg-blue-100 bg-opacity-50 transition-all duration-500
+}
+#NewTask:only-child{
+  @apply transition-all duration-500
 }
 #taskName{
   @apply shadow-lg h-10 rounded-lg p-2 drop-shadow-md mb-3
 }
+#labelSwitch{
+  @apply text-center text-black select-none
+}
+#addTaskSwitch{
+  @apply hidden
+}
+#addTaskSwitch:checked ~ select, #addTaskSwitch:checked~input,
+#addTaskSwitch:checked~textarea,
+#addTaskSwitch:checked~.addbtn,
+#addTaskSwitch:checked~label[for="taskName"],
+#addTaskSwitch:checked~label[for="taskDescription"],
+#addTaskSwitch:checked~label[for="taskPriority"]{
+  @apply hidden
+}
+
 textarea{
-  @apply drop-shadow-md rounded-md p-2 h-28 resize-none mb-3
+  @apply drop-shadow-md rounded-md p-2 h-28 resize-none mb-3 shadow-lg
 }
 label{
   @apply text-blue-500
+}
+select{
+  @apply h-10 bg-white rounded-lg p-2 shadow-lg drop-shadow-md mb-3
 }
 .addbtn{
   @apply bg-blue-500 w-fit p-3 rounded-full text-white 
@@ -38,9 +59,17 @@ article{
   shadow-lg drop-shadow-md mt-3
 }
 article .name{
-  @apply text-blue-500 flex items-center gap-2 justify-between
+  @apply flex items-center gap-2 justify-between
 }
-
+.couleur1{
+  @apply text-green-400
+}
+.couleur2{
+  @apply text-orange-400
+}
+.couleur3{
+  @apply text-red-500
+}
 article button{
   @apply text-lg
 }

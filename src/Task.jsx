@@ -63,7 +63,7 @@ export default function Task({ task, setTask }) {
 
     return (
         <article>
-            <div className="name">{task.name}
+            <div className={"name " + (task.priority == 1  ? "couleur1" : '') + (task.priority == 2 ? "couleur2" : '') + (task.priority == 3 ? "couleur3" : '')}>{task.name}
                 <div className="btn">
                     {task.state == true ? <FcOk title="The task is done" /> : <ImHourGlass title="On going task" />}
                     {task.state == false && <button title="Finish the task" onClick={pacthTaskState}>
